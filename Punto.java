@@ -1,6 +1,7 @@
 package figuras;
 
 public class Punto {
+    // Comentario para mostrar cambio en rama develop en la actividad 4
     private double x;
     private double y;
 
