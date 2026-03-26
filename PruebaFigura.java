@@ -3,11 +3,29 @@ package figuras;
 import java.util.Scanner;
 import java.awt.Color;
 
+/**
+ * Clase de prueba que permite al usuario interactuar con distintas figuras
+ * geométricas (triángulo, rectángulo y cuadrado).
+ * A través de un menú, el usuario puede introducir datos y obtener
+ * el área y perímetro de cada figura.
+ */
 public class PruebaFigura {
+    
+    /** Opción elegida por el usuario en el menú */
     private static int opcion;
+    
+    /** Mensaje para mostrar el área */
     private static final String AREA = "El área es ";
+    
+    /** Mensaje para mostrar el perímetro */
     private static final String PERIMETRO = "El perímetro es ";
 
+    /**
+     * Método principal del programa.
+     * Controla el flujo del menú y la interacción con el usuario.
+     * 
+     * @param args Argumentos de la línea de comandos
+     */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         do {
@@ -33,6 +51,14 @@ public class PruebaFigura {
         teclado.close();
     }
 
+    /**
+     * Crea un cuadrado a partir de los datos introducidos por el usuario
+     * y muestra su área y perímetro.
+     * 
+     * @param teclado Objeto Scanner para leer datos
+     * @param x Coordenada X del centro
+     * @param y Coordenada Y del centro
+     */
     private static void cuadrado(Scanner teclado, double x, double y) {
         System.out.print("Introduzca el lado del cuadrado: ");
         double lado = teclado.nextDouble();
@@ -41,6 +67,14 @@ public class PruebaFigura {
         System.out.println(AREA + c.area());
     }
 
+    /**
+     * Crea un rectángulo a partir de los datos introducidos por el usuario
+     * y muestra su área y perímetro.
+     * 
+     * @param teclado Objeto Scanner para leer datos
+     * @param x Coordenada X del centro
+     * @param y Coordenada Y del centro
+     */
     private static void rectangulo(Scanner teclado, double x, double y) {
         System.out.print("Introduzca la base del rectángulo: ");
         double base = teclado.nextDouble();
@@ -51,6 +85,14 @@ public class PruebaFigura {
         System.out.println(AREA + r.area());
     }
 
+    /**
+     * Crea un triángulo a partir de los datos introducidos por el usuario
+     * y muestra su área y perímetro.
+     * 
+     * @param teclado Objeto Scanner para leer datos
+     * @param x Coordenada X del centro
+     * @param y Coordenada Y del centro
+     */
     private static void triangulo(Scanner teclado, double x, double y) {
         System.out.print("Introduzca el lado 1 del triángulo: ");
         double lado1 = teclado.nextDouble();
@@ -63,6 +105,11 @@ public class PruebaFigura {
         System.out.println(AREA + t.area());
     }
 
+    /**
+     * Muestra un menú de opciones al usuario y valida la opción elegida.
+     * 
+     * @return Opción seleccionada (1-4)
+     */
     public static int mostrarMenu() {
         int opción;
         System.out.println("1) Triángulo");
