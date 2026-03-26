@@ -6,8 +6,6 @@ package figuras;
  * y calcular relaciones entre puntos.
  */
 public class Punto {
-
-    /** Coordenada X del punto */
     private double x;
     
     /** Coordenada Y del punto */
